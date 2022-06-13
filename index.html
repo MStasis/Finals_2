@@ -32,7 +32,12 @@
     a = bookArray[0].price
     b = bookArray[1].price
     c = bookArray[2].price
-    min = ((a<b)&&(a<c)) ? a:((b<a)&&(b<c)) ? b:c
+    if(a < b && a < c)
+        min = 0;
+    else if(b < a && b < c)
+        min = 1;
+    else
+        min = 3;
     most.title =  bookArray[min].title
     document.write("<hr>가장 가격이 싼 책은 " + most.title);
 </script>
