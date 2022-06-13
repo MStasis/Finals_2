@@ -28,10 +28,11 @@
    
     // 가장 가격이 싼 책 찾는 부분 완성하시오
     let most = bookArray[0];  
+    let min;
     a = bookArray[0].price
     b = bookArray[1].price
     c = bookArray[2].price
-    max = ((a<b)&&(a<c)) ? a:((b<a)&&(b<c)) ? b:c
+    min = ((a<b)&&(a<c)) ? a:((b<a)&&(b<c)) ? b:c
     most.title =  bookArray[min].title
     document.write("<hr>가장 가격이 싼 책은 " + most.title);
 </script>
